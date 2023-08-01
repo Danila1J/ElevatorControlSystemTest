@@ -36,7 +36,7 @@ public class Elevator {
      */
     public Elevator(int cabinNumber, int currentFloor) {
         // проверка валидности начальных параметров
-        if (currentFloor < MIN_FLOOR || currentFloor > MAX_FLOOR) {
+        if (!isValidFloor(currentFloor)) {
             throw new IllegalArgumentException("Неверные параметры инициализации для лифта");
         }
         this.cabinNumber = cabinNumber;
